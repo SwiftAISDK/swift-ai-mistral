@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-mistral",
+  "version": "1.0.0",
+  "releaseID": "modular-3",
+  "source": {
+    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "workingTree": false,
+    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+  },
+  "dependencies": [
+    {
+      "package": "swift-ai-core",
+      "from": "1.1.0"
+    }
+  ],
+  "changes": [
+    {
+      "id": "remaining-package-extraction",
+      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
+      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+    }
+  ],
+  "canonicalDirectory": "Packages/swift-ai-mistral",
+  "upstream": [
+    {
+      "name": "@ai-sdk/mistral",
+      "reviewedVersion": "4.0.72",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.mistral`, `MistralLanguageModel`, `MistralEmbeddingModel`, `MistralTranscriptionModel`, `MistralSpeechModel`, `PerplexityMistralUpstreamTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-jRbvxwP/zNmIiz/PTeqJqk5nAA7ts/PbvfKohPi6jgh/5xs9+GrVvRlOKlPXHuivfyUfJ3sFjlJrCCU+78wf+Q==",
+      "sourceRef": "npm:@ai-sdk/mistral@4.0.72",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ],
+  "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
+  "canonicalInputs": [
+    {
+      "canonicalPath": ".github/workflows/package-check.yml",
+      "sha256": "7ff448e130f7aed96c38accdf828b6d993997ebc5317358347e9a70a649e67ca"
+    },
+    {
+      "canonicalPath": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Package.swift",
+      "sha256": "44b356a8d3300cdf42a0844fabf0ae018c8a533c12bf12b64c7a3a4a4a9bee84"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Porting/map.json",
+      "sha256": "88f84d76165ff3936598b1d10f9aa6c1d7aebb6b49e06998c13c3290eefb7393"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/README.md",
+      "sha256": "e185e4b5c7c5c0de8aeddef85eec5dd15b6225cc595fcdc123f110876f4f5b86"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralConversationLanguageModel.swift",
+      "sha256": "01f74b0927b6508e6139253e98b03a3f07853304134cdbfa81046fb76dcdfa8b"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralConversationOptions.swift",
+      "sha256": "4e9f6c908e4592d5741ce77cf8b53db9d2dc2f1788d02079b03a4396255ad00e"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralConversationTools.swift",
+      "sha256": "9b76d6e7235bce26c112d40370b7112a20457e4653b11f327792b0c38a45cc39"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralEmbeddingModel.swift",
+      "sha256": "f8770400c53628ba64a782611552854adae0386d59eaf0535957fff6e352dc86"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralLanguageOptions.swift",
+      "sha256": "95e1daa3838d48c981e00ecbd94331bdd6849262437fe62b531f99e9ad547d3a"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralMessageParsing.swift",
+      "sha256": "ef8c7d28f0bb9dbed1b4bdaa2b7da3154b55bf8417ab95d6656084e3f6373355"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralModels.swift",
+      "sha256": "a138933b8ce878f83efed787bd2b9ec806013f95bc5520dc2e19b2442af387a9"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralProvider.swift",
+      "sha256": "de9b4a04a7b72eca148658e1b5c3c31da95b01cbc4108f5ceca2af5a7bbc9578"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralSpeechModel.swift",
+      "sha256": "3033b02c7891e33c4df9522e82bcfb7d76573cc45288f0d8a5f33879ad754228"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralTools.swift",
+      "sha256": "5a959bbcf8e2b94cd60a82b1c7fa687cd8a710281e15f010348dce34c69f3b29"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralTranscriptionModel.swift",
+      "sha256": "36bec44c3d2bb3b1e761e1316eb63a6d822c93c918eb8b4fe6d3303d9076b736"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/FixtureDownloadTransport.swift",
+      "sha256": "b013a76f42e66f7f9d98df2085e4a95f94227200ed666e12a2074b6f80d57e50"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/MistralLanguageAndEmbeddingTests.swift",
+      "sha256": "cfdabbc19c9a9d5820392aac8239724fdedf25f89eb56037c75f6f2493137e4d"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/MistralStreamingAndOptionsTests.swift",
+      "sha256": "09afd79ab563e76ab01689b5d2ff86e6b608daff9a873065227cf9096bcd1792"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/MistralTests.swift",
+      "sha256": "4466baedccbb62975ab4df58856f885c282beac05e211e2f9a7d24afad20939a"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/TestSupport.swift",
+      "sha256": "1fa3bb76fd27b240e6ea613b083a52f15a3a7db337bf7bc011e60fa65c8e2c6f"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/WeeklyMistral20261011Tests.swift",
+      "sha256": "b3b0bf5b8e9583c91f75a9b3fd47f6c44fcdb5c6d143e0a2a1a9a039e0967272"
+    }
+  ]
+}
