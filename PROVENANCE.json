@@ -1,41 +1,47 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-mistral",
-  "version": "1.0.0",
-  "releaseID": "modular-3",
+  "version": "1.1.0",
+  "releaseID": "weekly-upstream-20261101",
   "source": {
-    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
-    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "commit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
+    "baseCommit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
     "workingTree": false,
-    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+    "inputsSHA256": "b46f3e07b0a583d6fee81035987d74a06fc5c6109cbdf228144d1172d2c3676e"
   },
   "dependencies": [
     {
       "package": "swift-ai-core",
-      "from": "1.1.0"
+      "from": "1.2.0"
     }
   ],
   "changes": [
     {
-      "id": "remaining-package-extraction",
-      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
-      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+      "id": "weekly-upstream-20261101",
+      "notes": "GLM5.3 chat families use low/high/max; shared levels round lower-first/higher fallback and none maps to low with warning. Explicit provider reasoningEffort accepts high/none/low/max and passes through unchanged for configurable models. Conversations retains exact model whitelist and none/high efforts independently of Chat defaults; unknown or chat-only models warn unsupported. Native apiKeyProvider rotates keys for language/conversation/embedding/transcription/speech HTTP operations. Reviewed upstream: @ai-sdk/mistral 4.0.72 to 4.0.77. Validation passed: node Scripts/test-packages.mjs (all 52 owning package suites and the compatibility facade); node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); docs-site check and build (100 pages). Live provider calls were not run.",
+      "compatibility": "Minor release for additive native API; existing static settings and call sites remain compatible. Updated direct dependency minimums are recorded in the manifest. Existing documented JS/framework and native product gaps remain; version-delta review does not imply full parity or live-service testing. Explicit custom authentication skips an unused credential supplier, a deliberate native callback-order adaptation."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-mistral",
   "upstream": [
     {
       "name": "@ai-sdk/mistral",
-      "reviewedVersion": "4.0.72",
+      "reviewedVersion": "4.0.77",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.mistral`, `MistralLanguageModel`, `MistralEmbeddingModel`, `MistralTranscriptionModel`, `MistralSpeechModel`, `PerplexityMistralUpstreamTests.swift`",
+      "evidence": "`AIProviders.mistral`, `MistralLanguageModel`, `MistralEmbeddingModel`, `MistralTranscriptionModel`, `MistralSpeechModel`, `PerplexityMistralUpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-jRbvxwP/zNmIiz/PTeqJqk5nAA7ts/PbvfKohPi6jgh/5xs9+GrVvRlOKlPXHuivfyUfJ3sFjlJrCCU+78wf+Q==",
-      "sourceRef": "npm:@ai-sdk/mistral@4.0.72",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-U3VtP4uQ7V3IDlKK8MwYvkJbedA8Jbp3NyRHR44MKTUHdCUqSCS4ky3KCUpk44EVyCwDB3Wb0tnmIdd5WSVJ9w==",
+      "sourceRef": "npm:@ai-sdk/mistral@4.0.77",
+      "testRef": "028a025398782f4938303f48fbeee45c79af544b",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "EmbeddingModelV4",
+        "LanguageModelV4",
+        "ProviderV4",
+        "SpeechModelV4",
+        "TranscriptionModelV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -54,7 +60,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Porting/map.json",
-      "sha256": "88f84d76165ff3936598b1d10f9aa6c1d7aebb6b49e06998c13c3290eefb7393"
+      "sha256": "6612e4aee379bab7e3a9268c231b9aa87f3460c84a0bf697eab7d317160b55e3"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/README.md",
@@ -66,7 +72,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralConversationOptions.swift",
-      "sha256": "4e9f6c908e4592d5741ce77cf8b53db9d2dc2f1788d02079b03a4396255ad00e"
+      "sha256": "d5ae1e4b7291944ddac3f9445a41fecd8f7947399561829083517a782dbe340f"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralConversationTools.swift",
@@ -78,7 +84,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralLanguageOptions.swift",
-      "sha256": "95e1daa3838d48c981e00ecbd94331bdd6849262437fe62b531f99e9ad547d3a"
+      "sha256": "905627ebfb96f3bf0b402899d03bb05c90dd1e2a62195531f6d9429e5d9fd160"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralMessageParsing.swift",
@@ -86,11 +92,11 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralModels.swift",
-      "sha256": "a138933b8ce878f83efed787bd2b9ec806013f95bc5520dc2e19b2442af387a9"
+      "sha256": "ca5c585043711a0e72f2cc87538eb5f71e006e97762d359e7ce3601eb310ba67"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralProvider.swift",
-      "sha256": "de9b4a04a7b72eca148658e1b5c3c31da95b01cbc4108f5ceca2af5a7bbc9578"
+      "sha256": "c7dc9178ab6ca28c9af4bc7a59790f3335b4b9e09a3c982b633d8f6de8e4e8c7"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Sources/SwiftAIMistral/MistralSpeechModel.swift",
@@ -110,19 +116,23 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/MistralLanguageAndEmbeddingTests.swift",
-      "sha256": "cfdabbc19c9a9d5820392aac8239724fdedf25f89eb56037c75f6f2493137e4d"
+      "sha256": "1b8be06e39b8554daf57edc68fe5d82b6b979e011622e48608ca7e3d446dc732"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/MistralStreamingAndOptionsTests.swift",
-      "sha256": "09afd79ab563e76ab01689b5d2ff86e6b608daff9a873065227cf9096bcd1792"
+      "sha256": "3ec7f2dd07a5d5a4e30dd5fba959da5d5d194e2b3fb44ebe0985cf9a182a7e0d"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/MistralTests.swift",
-      "sha256": "4466baedccbb62975ab4df58856f885c282beac05e211e2f9a7d24afad20939a"
+      "sha256": "c5bdcc60c248b341f0c36a1534356972cf046f1077b941be11bd96089b4e2713"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/TestSupport.swift",
       "sha256": "1fa3bb76fd27b240e6ea613b083a52f15a3a7db337bf7bc011e60fa65c8e2c6f"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/Weekly20261101MistralTests.swift",
+      "sha256": "79c77e64b107a7ff66edd5773265fa6f1ff2fe836bb5aa9ba55346971b970255"
     },
     {
       "canonicalPath": "Packages/swift-ai-mistral/Tests/SwiftAIMistralTests/WeeklyMistral20261011Tests.swift",

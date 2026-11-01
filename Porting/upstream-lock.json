@@ -3,16 +3,22 @@
   "packages": [
     {
       "name": "@ai-sdk/mistral",
-      "reviewedVersion": "4.0.72",
+      "reviewedVersion": "4.0.77",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.mistral`, `MistralLanguageModel`, `MistralEmbeddingModel`, `MistralTranscriptionModel`, `MistralSpeechModel`, `PerplexityMistralUpstreamTests.swift`",
+      "evidence": "`AIProviders.mistral`, `MistralLanguageModel`, `MistralEmbeddingModel`, `MistralTranscriptionModel`, `MistralSpeechModel`, `PerplexityMistralUpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-jRbvxwP/zNmIiz/PTeqJqk5nAA7ts/PbvfKohPi6jgh/5xs9+GrVvRlOKlPXHuivfyUfJ3sFjlJrCCU+78wf+Q==",
-      "sourceRef": "npm:@ai-sdk/mistral@4.0.72",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-U3VtP4uQ7V3IDlKK8MwYvkJbedA8Jbp3NyRHR44MKTUHdCUqSCS4ky3KCUpk44EVyCwDB3Wb0tnmIdd5WSVJ9w==",
+      "sourceRef": "npm:@ai-sdk/mistral@4.0.77",
+      "testRef": "028a025398782f4938303f48fbeee45c79af544b",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "EmbeddingModelV4",
+        "LanguageModelV4",
+        "ProviderV4",
+        "SpeechModelV4",
+        "TranscriptionModelV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ]
 }
