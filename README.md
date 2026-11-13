@@ -1,5 +1,5 @@
 <!-- Generated distribution; edit the canonical repository. -->
-# swift-ai-mistral 1.2.0
+# swift-ai-mistral 1.2.1
 
 Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions are in PROVENANCE.json and Porting/.
 
@@ -8,7 +8,7 @@ Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions
 Add this package to your SwiftPM dependencies:
 
 ```swift
-.package(url: "https://github.com/SwiftAISDK/swift-ai-mistral.git", from: "1.2.0")
+.package(url: "https://github.com/SwiftAISDK/swift-ai-mistral.git", from: "1.2.1")
 ```
 
 Products: `SwiftAIMistral`.
@@ -18,7 +18,7 @@ Contribute and report issues in the canonical SwiftAISDK repository.
 
 # SwiftAIMistral
 
-Swift-native port of `@ai-sdk/mistral`, reviewed through npm 4.0.81. Source edits
+Swift-native port of `@ai-sdk/mistral`, reviewed through npm 4.0.86. Source edits
 belong to the canonical SwiftAISDK repository and are exported deterministically.
 
 ```swift
@@ -76,3 +76,7 @@ canonical checkout. See `Porting/map.json` for exact reviewed scope and adaptati
 
 Original public initializer and helper signatures remain available for typed
 function references, alongside the extended APIs. Their original defaults are preserved.
+
+## Current upstream review
+
+The reviewed baseline is `@ai-sdk/mistral` 4.0.86. Published runtime source, declarations and matching-release tests are unchanged from 4.0.81 apart from dependency/version propagation. The user-agent suffix now identifies the reviewed npm baseline. Existing speech, transcription and language options remain unchanged.

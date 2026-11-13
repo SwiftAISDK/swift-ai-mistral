@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "@ai-sdk/mistral",
-      "reviewedVersion": "4.0.81",
+      "reviewedVersion": "4.0.86",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.mistral`, `MistralLanguageModel`, `MistralEmbeddingModel`, `MistralTranscriptionModel`, `MistralSpeechModel`, `PerplexityMistralUpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.mistral`, `MistralLanguageModel`, `MistralEmbeddingModel`, `MistralTranscriptionModel`, `MistralSpeechModel`, `PerplexityMistralUpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-Ac/XEI2VEfyOet7DKTzBbuCkj0+zirX0Vszo2+E2YwQS5M9FKOWeeJ0MXTEBv5C5+UFhLAvAntMjgTU5ADJJLw==",
-      "sourceRef": "npm:@ai-sdk/mistral@4.0.81",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-bda1lDusQ3NiW46mcVVXh8HsXvU2jmJJI7tyqMGiwNqyfUIY/KChS6alUOcNIZOdsV1vtECK9aKEJrV39nPLDA==",
+      "sourceRef": "npm:@ai-sdk/mistral@4.0.86",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "EmbeddingModelV4",
@@ -19,7 +19,7 @@
         "SpeechModelV4",
         "TranscriptionModelV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ]
 }
