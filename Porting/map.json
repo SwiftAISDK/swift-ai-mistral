@@ -48,6 +48,7 @@
     ],
     "tests": [
       "Tests/SwiftAIMistralTests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIMistralTests/MistralChatUpstreamParityTests.swift",
       "Tests/SwiftAIMistralTests/MistralLanguageAndEmbeddingTests.swift",
       "Tests/SwiftAIMistralTests/MistralStreamingAndOptionsTests.swift",
       "Tests/SwiftAIMistralTests/MistralTests.swift",
